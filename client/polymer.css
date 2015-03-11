@@ -5,3 +5,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+
+html /deep/ * {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
