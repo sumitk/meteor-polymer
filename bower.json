@@ -1,0 +1,9 @@
+{
+  "name": "polymer",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "paper-button": "Polymer/paper-button#~0.5.5"
+  }
+}
