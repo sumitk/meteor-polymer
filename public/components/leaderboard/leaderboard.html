@@ -1,0 +1,75 @@
+<polymer-element name="leaderboard-example" fit layout vertical>
+	<template>
+
+		<style>
+			:host {
+				display: block;
+				height: 100%;
+				width: 100%;
+				max-width: 480px;
+				padding: 24px 0;
+				box-sizing: border-box;
+				margin: 0 auto;
+			}
+		</style>
+
+		<meteor-collection name="leaderboard" ref="{{collection}}"></meteor-collection>
+		<meteor-query collection="{{collection}}" options="{{options}}" data="{{leaderboard}}"></meteor-query>
+
+		<h1>Leaderboard</h1>
+
+		<core-selector
+			id="selector"
+			selected="{{selectedId}}"
+			valueattr="id"
+			target="{{$.list}}"></core-selector>
+
+		<core-list data="{{leaderboard}}" id="list" flex>
+
+			<template>
+				<paper-item id="{{model._id}}">
+					<div flex layout horizontal>
+						<i flex>{{model.name}}</i>
+						<b>{{model.points}}</b>
+					</div>
+				</paper-item>
+			</template>
+
+		</core-list>
+
+		<template bind="{{selected}}">
+			<div layout horizontal>
+				<i flex>{{name}}</i>
+				<paper-button on-tap="{{givePoints}}">Give 5 points</paper-button>
+			</div>
+		</template>
+
+	</template>
+
+	<script>
+		Polymer('leaderboard-example', {
+			collection: null,
+			options: {
+				sort: {
+					points: -1
+				}
+			},
+
+			selectedIdChanged: function () {
+				this.selected = this.collection.findOne(this.selectedId);
+			},
+
+			givePoints: function () {
+				this.selected.points += 5;
+				this.collection.update(this.selected._id, this.selected, function (error) {
+					if (!error) {
+						// BUGFIX selected doesn't change when order changes
+						this.$.selector.updateSelected();
+					}
+				}.bind(this));
+
+			}
+
+		});
+	</script>
+</polymer-element>

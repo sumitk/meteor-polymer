@@ -4,6 +4,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "paper-button": "Polymer/paper-button#~0.5.5"
+    "paper-button": "Polymer/paper-button#~0.5.5",
+    "core-selector": "Polymer/core-selector#~0.5.5"
   }
 }
