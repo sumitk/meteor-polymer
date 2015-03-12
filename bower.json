@@ -4,6 +4,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "paper-button": "Polymer/paper-button#~0.5.5"
+    "webcomponentsjs": "~0.5.5",
+    "polymer": "Polymer/polymer#~0.5.5"
   }
 }

@@ -1,7 +1,3 @@
-var vulcan = Npm.require("vulcanize");
-var path = Npm.require('path');
-var fs = Npm.require('fs');
-
 var doHTMLScanning = function (compileStep, htmlScanner) {
 	// XXX the way we deal with encodings here is sloppy .. should get
 	// religion on that
@@ -21,12 +17,10 @@ var doHTMLScanning = function (compileStep, htmlScanner) {
 	}
 
 	if (results.head)
-		compileStep.addHtml({ section: "head", data: results.head });
+		compileStep.addHtml({ section: 'head', data: results.head });
 
 	if (results.body)
-		compileStep.addHtml({ section: "body", data: results.body });
-
-	return results.html;
+		compileStep.addHtml({ section: 'body', data: results.body });
 
 };
 
