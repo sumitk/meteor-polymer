@@ -6,8 +6,8 @@ Replaces Blaze and Spacebars with Polymer
 
 ## Get started
 
-    git clone git@github.com:synka/meteor-polymer-template.git
-    cd meteor-polymer-template
+    git clone git@github.com:synka/meteor-polymer.git
+    cd meteor-polymer
     meteor
 
 ## To add components:
