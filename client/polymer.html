@@ -17,4 +17,10 @@
 </head>
 
 <body>
+	<a is="pushstate-anchor" href="/">Home</a>
+	<a is="pushstate-anchor" href="/about">About</a>
+	<app-router mode="pushstate">
+		<app-route path="/" import="components/home-view/home-view.html"></app-route>
+		<app-route path="/about" import="components/about-view/about-view.html"></app-route>
+	</app-router>
 </body>
