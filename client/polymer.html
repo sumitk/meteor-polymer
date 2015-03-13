@@ -1,5 +1,5 @@
 <head>
-	<title>Polymer</title>
+	<title>Polymer Router</title>
 
 	<meta charset="utf-8">
 
@@ -20,7 +20,7 @@
 	<a is="pushstate-anchor" href="/">Home</a>
 	<a is="pushstate-anchor" href="/about">About</a>
 	<app-router mode="pushstate">
-		<app-route path="/" import="components/home-view/home-view.html"></app-route>
-		<app-route path="/about" import="components/about-view/about-view.html"></app-route>
+		<app-route path="/" element="home-view"></app-route>
+		<app-route path="/about" element="about-view"></app-route>
 	</app-router>
 </body>
