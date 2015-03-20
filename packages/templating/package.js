@@ -1,4 +1,3 @@
 Package.describe({
-  summary: "Allows templates to be defined in .html files",
-  version: '1.0.11'
+  version: '1.1.0'
 });
