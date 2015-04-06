@@ -10,7 +10,7 @@ Install yeoman:
 
 Install meteor-polymer:
 
-    npm install -g meteor-polymer
+    npm install -g generator-meteor-polymer
 
 Create new project directory:
 
