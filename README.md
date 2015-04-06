@@ -1,13 +1,27 @@
 # Polymer Meteor
 
-###### A Better Meteor
-
 Replaces Blaze and Spacebars with Polymer
 
 ## Get started
 
-    git clone git@github.com:synka/meteor-polymer.git
-    cd meteor-polymer
+Install yeoman:
+
+    npm install -g yeoman
+
+Install meteor-polymer:
+
+    npm install -g meteor-polymer
+
+Create new project directory:
+
+    mkdir my-project && cd $_
+
+Initiate generator:
+
+    yo meteor-polymer
+
+Run meteor:
+
     meteor
 
 ## To add components:
@@ -26,15 +40,15 @@ There is a leaderboard app at the example branch.
 
 ## How it works
 
-The default meteor packages blaze, spacebars, and templating are replaced locally. 
-Instead [differential/vulcanize](https://atmospherejs.com/differential/vulcanize) 
-is used to process components. There is also a local package named polymer that 
+The default meteor packages blaze, spacebars, and templating are replaced locally.
+Instead [differential/vulcanize](https://atmospherejs.com/differential/vulcanize)
+is used to process components. There is also a local package named polymer that
 parses html files for `head` and `body` tags.
 
 ## Meteor components
 
-There are some built in components made by @atoy40, taken from 
-[meteor-polymer-music](https://github.com/atoy40/meteor-polymer-music) 
+There are some built in components made by @atoy40, taken from
+[meteor-polymer-music](https://github.com/atoy40/meteor-polymer-music)
 
 ### meteor-status
 
@@ -59,3 +73,7 @@ Subscribe to a server publication.
 Query and observe a collection.
 
 	<meteor-query collection="{{collection}}" options="{{options}}" data="{{players}}"></meteor-query>
+
+## License
+
+MIT
