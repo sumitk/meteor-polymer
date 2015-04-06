@@ -1,4 +1,4 @@
-# Polymer Meteor
+# Meteor Polymer
 
 Replaces Blaze and Spacebars with Polymer
 
